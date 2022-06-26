@@ -15,6 +15,11 @@ from db.db import session
 gem_router = APIRouter()
 
 
+@gem_router.get('/')
+def greet():
+    return 'Hello production'
+
+
 @gem_router.get('/gems', tags=['Gems'])
 def gems(lte: Optional[int] = None, gte: Optional[int] = None,
          type: List[Optional[GemTypes]] = Query(None)):
