@@ -1,0 +1,1 @@
+If you want files to work just delete the .txt extension an the end of each. Otherwise, you can read or copy the data from them.

@@ -1,0 +1,13 @@
+from multiprocessing import cpu_count
+
+# Socket Path
+bind = 'unix:/root/Fastapi-jewels-tutorial/gunicorn.sock'
+
+# Worker Options
+workers = cpu_count() + 1
+worker_class = 'uvicorn.workers.UvicornWorker'
+
+# Logging Options
+loglevel = 'debug'
+accesslog = '/root/Fastapi-jewels-tutorial/access_log'
+errorlog =  '/root/Fastapi-jewels-tutorial/error_log'

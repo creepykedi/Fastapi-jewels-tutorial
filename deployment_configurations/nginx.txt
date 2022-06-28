@@ -1,0 +1,8 @@
+server {
+    listen 80;
+    server_name www.yourwebsite.com yourwebsite.com;
+
+    location / {
+        proxy_pass http://unix:/Fastapi-jewels-tutorial/gunicorn.sock;
+    }
+}

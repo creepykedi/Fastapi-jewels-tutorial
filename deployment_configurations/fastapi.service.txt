@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn Daemon for FastAPI Application
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/root/Fastapi-jewels-tutorial
+ExecStart=/root/Fastapi-jewels-tutorial/venv/bin/python3 /root/Fastapi-jewels-tutorial/venv/bin/gunicorn -c gunicorn_conf.py main:app
+
+[Install]
+WantedBy=multi-user.target
